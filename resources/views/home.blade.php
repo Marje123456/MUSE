@@ -3,6 +3,7 @@
 @section('title', 'Poseify - Modeling Agency Website Template')
 
 @section('header')
+    <div id="top-anchor"></div>
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -10,8 +11,8 @@
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="title mx-5 px-5 animated slideInDown">
                         <div class="title-center">
-                            <h5>Welcome</h5>
-                            <h1 class="display-1">Modeling Agency</h1>
+                            <h5>muse</h5>
+                           <h1 class="display-1">MARJE COMO TE QUIERO</h1>
                         </div>
                     </div>
                     <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -26,7 +27,7 @@
                     <div class="title mx-5 px-5 animated slideInDown">
                         <div class="title-center">
                             <h5>Welcome</h5>
-                            <h1 class="display-1">Modeling Agency</h1>
+                            <h1 class="display-1">Own Certified Digital Pieces</h1>
                         </div>
                     </div>
                     <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -49,65 +50,59 @@
 
 @section('content')
     <!-- About Start -->
-    <div class="container-fluid bg-secondary">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-7 pb-0 pb-lg-5 py-5">
-                    <div class="pb-0 pb-lg-5 py-5">
-                        <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="title-left">
-                                <h5>History</h5>
-                                <h1>About Our Agency</h1>
-                            </div>
-                        </div>
-                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">Tempor erat elitr rebum at clita. Diam dolor
-                            diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-                            lorem sit clita duo justo magna dolore erat amet. Stet no et lorem dolor et diam, amet duo
-                            ut dolore vero eos.</p>
-                        <ul class="list-group list-group-flush mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                            <li class="list-group-item bg-dark text-body border-secondary ps-0">
-                                <i class="fa fa-check-circle text-primary me-1"></i> Lorem ipsum dolor sit amet
-                                consectetur elit.
-                            </li>
-                            <li class="list-group-item bg-dark text-body border-secondary ps-0">
-                                <i class="fa fa-check-circle text-primary me-1"></i> Donec vehicula, sem ut tempus
-                                tempus.
-                            </li>
-                            <li class="list-group-item bg-dark text-body border-secondary ps-0">
-                                <i class="fa fa-check-circle text-primary me-1"></i> Morbi mi dapibus, feugiat nisi non
-                                mollis justo.
-                            </li>
-                        </ul>
-                        <div class="row wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="col-6">
-                                <a href="#!" class="btn btn-outline-primary border-2 py-3 w-100">Become A Model</a>
-                            </div>
-                            <div class="col-6">
-                                <a href="#!" class="btn btn-primary py-3 w-100">Schedule Casting</a>
-                            </div>
+<div class="container-fluid bg-secondary" id="about">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7 pb-0 pb-lg-5 py-5">
+                <div class="pb-0 pb-lg-5 py-5">
+                    <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="title-left">
+                            <h5 class="about-kicker"><span>Sobre Muse</span></h5>
+                            <h1>La galería digital del arte personalizado</h1>
                         </div>
                     </div>
+
+                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                        Muse conecta artistas y coleccionistas para crear obras únicas en un entorno curado, seguro y lleno de valor.
+                    </p>
+
+                    <p class="mb-4 wow fadeInUp" data-wow-delay="0.3s">
+                        Hoy, muchos encargos artísticos siguen ocurriendo de forma informal, sin una experiencia a la altura del valor real de la obra.
+                        Eso hace que el proceso pierda claridad, confianza y la sensación de estar creando algo verdaderamente especial.
+                    </p>
+
+                    <p class="mb-5 wow fadeInUp" data-wow-delay="0.4s">
+                        Muse transforma ese recorrido en una experiencia cuidada de principio a fin: un espacio donde artistas y coleccionistas se encuentran,
+                        conectan y dan forma a obras por encargo dentro de un entorno estructurado, con reputación, protección en el pago y una presentación
+                        alineada con el valor de cada creación. Además, cada obra puede quedar certificada con su registro, autoría, propiedad e historial.
+                    </p>
+
+                    <h4 class="wow fadeInUp" data-wow-delay="0.5s">
+                        Muse convierte una obra por encargo en una experiencia con valor duradero.
+                    </h4>
                 </div>
-                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.5s">
-                    <img class="img-fluid" src="{{ asset('assets/img/about.png') }}" alt="">
-                </div>
+            </div>
+
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.6s">
+                <img class="img-fluid" src="{{ asset('assets/img/about.png') }}" alt="Sobre Muse">
             </div>
         </div>
     </div>
-    <!-- About End -->
+</div>
+<!-- About End -->
 
 
     <!-- Service Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center">
-                <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="title-center">
-                        <h5>Services</h5>
-                        <h1>How We Help You</h1>
-                    </div>
+<div class="container-fluid py-5" id="services">
+    <div class="container py-5">
+        <div class="text-center">
+            <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                <div class="title-center">
+                    <h5><span>Servicios</span></h5>
+                    <h1>Cómo funciona la experiencia Muse</h1>
                 </div>
             </div>
+        </div>
             <div class="service-item service-item-left">
                 <div class="row g-0 align-items-center">
                     <div class="col-md-5">
@@ -193,30 +188,34 @@
     <!-- Service End -->
 
 
-    <!-- Banner Start -->
-    <div class="container-fluid py-5 bg-secondary">
-        <div class="container py-5">
-            <div class="row g-0 justify-content-center">
-                <div class="col-lg-7 text-center">
-                    <div class="title mx-5 px-5 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="title-center">
-                            <h5>Casting</h5>
-                            <h1>Want to be a Model?</h1>
-                        </div>
+    <!-- Contact Anchor -->
+<div id="contact-anchor"></div>
+
+<!-- Contact Start -->
+<div class="container-fluid py-5 bg-secondary" id="contact">
+    <div class="container py-5">
+        <div class="row g-0 justify-content-center">
+            <div class="col-lg-7 text-center">
+                <div class="title mx-5 px-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="title-center">
+                        <h5><span>Contacto</span></h5>
+                        <h1>Hablemos de tu próxima obra</h1>
                     </div>
-                    <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Sed erat lectus, venenatis sit amet egestas eget, aliquet a nisl.</p>
-                    <div class="position-relative wow fadeInUp" data-wow-delay="0.3s">
-                        <input class="form-control border-0 bg-dark rounded-pill w-100 py-4 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-3 px-4 position-absolute top-0 end-0 me-2"
-                            style="margin-top: 7px;">SignUp</button>
-                    </div>
+                </div>
+                <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                    Muse conecta artistas y coleccionistas en una experiencia más cuidada, clara y valiosa.
+                </p>
+                <div class="position-relative wow fadeInUp" data-wow-delay="0.3s">
+                    <input class="form-control border-0 bg-dark rounded-pill w-100 py-4 ps-4 pe-5" type="text"
+                        placeholder="Tu correo">
+                    <button type="button" class="btn btn-primary py-3 px-4 position-absolute top-0 end-0 me-2"
+                        style="margin-top: 7px;">Contactar</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Banner End -->
+</div>
+<!-- Contact End -->
 
 
     <!-- Team Start -->

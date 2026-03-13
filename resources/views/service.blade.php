@@ -1,16 +1,15 @@
 @extends('layouts.app')
 
-@section('title', 'Poseify - Modeling Agency Website Template')
+@section('title', 'Muse - Servicios')
 
 @section('header')
     <div class="page-header pb-5">
         <div class="container text-center py-5">
-            <h1 class="display-4 text-uppercase mb-3 animated slideInDown">Services</h1>
+            <h1 class="display-4 text-uppercase mb-3 animated slideInDown">Servicios</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Services</li>
+                    <li class="breadcrumb-item"><a class="text-white" href="{{ url('/') }}">Inicio</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Servicios</li>
                 </ol>
             </nav>
         </div>
@@ -18,100 +17,112 @@
 @endsection
 
 @section('content')
-    <!-- Service Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center">
-                <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="title-center">
-                        <h5>Services</h5>
-                        <h1>How We Help You</h1>
+<!-- Service Start -->
+<div class="container-fluid py-5" id="services">
+    <div class="container py-5">
+        <div class="text-center">
+            <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                <div class="title-center">
+                    <h5><span>Servicios</span></h5>
+                    <h1>Cómo funciona la experiencia Muse</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-item service-item-left">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-5">
+                    <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
+                        <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-1.jpg') }}" alt="Encargos abiertos en Muse">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                        <h3 class="text-uppercase">Encargos abiertos</h3>
+<p class="mb-4">
+    Los coleccionistas pueden publicar una propuesta con categoría, presupuesto y descripción
+    para recibir aplicaciones de artistas profesionales. Muse organiza el proceso para que la
+    elección sea más clara, visual y estructurada.
+</p>
+<a class="btn btn-outline-primary border-2 px-4" href="{{ url('/#about') }}">
+    Descubrir más <i class="fa fa-arrow-right ms-1"></i>
+</a>
                     </div>
                 </div>
             </div>
-            <div class="service-item service-item-left">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-1.jpg') }}" alt="">
-                        </div>
+        </div>
+
+        <div class="service-item service-item-right">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-5 order-md-1 text-md-end">
+                    <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                        <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-2.jpg') }}" alt="Propuesta directa en Muse">
                     </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Fashion Shows</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
+                        <h3 class="text-uppercase">Propuesta directa</h3>
+                        <p class="mb-4">
+                            Muse también permite una relación más cercana entre artista y coleccionista. Desde el perfil
+                            del artista, el coleccionista puede enviar un encargo privado y crear una experiencia más
+                            personal, selecta y alineada con el mundo del arte.
+                        </p>
+                        <a class="btn btn-outline-primary border-2 px-4" href="{{ url('/#about') }}">
+                            Ver experiencia <i class="fa fa-arrow-right ms-1"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="service-item service-item-right">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-2.jpg') }}" alt="">
-                        </div>
+        </div>
+
+        <div class="service-item service-item-left">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-5">
+                    <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
+                        <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-3.jpg') }}" alt="Pago protegido en Muse">
                     </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Corporate Events</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
+                        <h3 class="text-uppercase">Pago protegido</h3>
+                        <p class="mb-4">
+                            El pago queda retenido mientras la obra se desarrolla. Así, el artista trabaja con mayor
+                            seguridad y el coleccionista cuenta con un proceso protegido hasta la entrega final,
+                            reduciendo fricción, incertidumbre y riesgo.
+                        </p>
+                        <a class="btn btn-outline-primary border-2 px-4" href="{{ url('/#about') }}">
+                            Entender el proceso <i class="fa fa-arrow-right ms-1"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="service-item service-item-left">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5">
-                        <div class="service-img p-5 wow fadeInRight" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-3.jpg') }}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Commercial Photo Shots</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
+        </div>
+
+        <div class="service-item service-item-right">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-5 order-md-1 text-md-end">
+                    <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
+                        <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-4.jpg') }}" alt="Certificación digital en Muse">
                     </div>
                 </div>
-            </div>
-            <div class="service-item service-item-right">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-5 order-md-1 text-md-end">
-                        <div class="service-img p-5 wow fadeInLeft" data-wow-delay="0.2s">
-                            <img class="img-fluid rounded-circle" src="{{ asset('assets/img/service-4.jpg') }}" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-7">
-                        <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Professional Modeling</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
-                        </div>
+                <div class="col-md-7">
+                    <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
+                        <h3 class="text-uppercase">Certificación y valor duradero</h3>
+                        <p class="mb-4">
+                            Cada obra puede quedar vinculada a su registro, autoría, propiedad e historial. Muse
+                            convierte el encargo artístico en una pieza verificable, coleccionable y preparada para
+                            conservar valor más allá del momento de la entrega.
+                        </p>
+                        <a class="btn btn-outline-primary border-2 px-4" href="{{ url('/#about') }}">
+                            Explorar Muse <i class="fa fa-arrow-right ms-1"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Service End -->
 
 
     <!-- Testimonial Start -->
