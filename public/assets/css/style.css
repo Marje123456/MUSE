@@ -534,4 +534,9 @@ body {
     .logo-img{
         height: 150px;
     }
+    
+}
+#artists-role,
+#collectors-role {
+    scroll-margin-top: 140px;
 }

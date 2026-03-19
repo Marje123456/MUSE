@@ -14,11 +14,12 @@
             <a href="/#contact-anchor" class="nav-item nav-link">Contact</a>
 
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('team') || request()->routeIs('testimonial') || request()->routeIs('notfound') ? 'active' : '' }}" data-bs-toggle="dropdown">Pages</a>
+                <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('team') || request()->routeIs('testimonial') || request()->routeIs('notfound') ? 'active' : '' }}" data-bs-toggle="dropdown">Algo Mas</a>
                 <div class="dropdown-menu m-0">
-                    <a href="{{ route('team') }}" class="dropdown-item {{ request()->routeIs('team') ? 'active' : '' }}">Our Models</a>
-                    <a href="{{ route('testimonial') }}" class="dropdown-item {{ request()->routeIs('testimonial') ? 'active' : '' }}">Testimonial</a>
-                    <a href="{{ route('notfound') }}" class="dropdown-item {{ request()->routeIs('notfound') ? 'active' : '' }}">404 Page</a>
+                    <a href="/#services" class="dropdown-item">Cómo funciona</a>
+                    <a href="{{ route('team') }}" class="dropdown-item">Artistas</a>
+                    <a href="{{ route('testimonial') }}" class="dropdown-item">Experiencia Muse</a>
+                    <a href="{{ route('faqs') }}" class="dropdown-item">FAQs</a>
                 </div>
             </div>
         </div>
