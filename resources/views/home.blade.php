@@ -12,7 +12,7 @@
                     <div class="title mx-5 px-5 animated slideInDown">
                         <div class="title-center">
                             <h5>muse</h5>
-                           <h1 class="display-1">MARJE COMO TE QUIERO</h1>
+                            <h1 class="display-1">Haz del arte personalizado una experiencia excepcional</h1>
                         </div>
                     </div>
                     <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -117,8 +117,7 @@
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            <a class="btn btn-outline-primary border-2 px-4" href="/service#artists-role">Descubrir más <i class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -137,8 +136,7 @@
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            <a class="btn btn-outline-primary border-2 px-4" href="/service#collectors-role">Ver experiencia <i class="fa fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>

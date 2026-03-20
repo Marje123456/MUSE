@@ -16,8 +16,6 @@
         <div class="col-lg-5">
             <div class="bg-dark rounded p-4 p-md-5 shadow">
                 <div class="text-center mb-4">
-                    <h2 class="mb-3 text-white">Acceder</h2>
-                    <p class="text-light mb-0">Entra en tu cuenta de Muse.</p>
                 </div>
 
                 <form>
@@ -44,4 +42,15 @@
         </div>
     </div>
 </div>
+<style>
+form .form-control,
+form .form-control::placeholder,
+form .form-label {
+    color: #000 !important;
+}
+
+form .form-control {
+    background-color: #fff !important;
+}
+</style>
 @endsection
