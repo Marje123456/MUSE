@@ -13,6 +13,14 @@ Route::view('/login', 'auth.login')->name('login');
 Route::view('/faqs', 'faqs')->name('faqs');
 Route::view('/404', 'notfound')->name('notfound');
 
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+})->name('admin.dashboard');
+
+Route::get('/admin/', function () {
+    return view('admin.dashboard');
+});
+
 Route::fallback(function () {
     return view('notfound');
 });
