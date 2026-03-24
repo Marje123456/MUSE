@@ -19,135 +19,139 @@
                 </select>
             </div>
 
-            <form id="artistForm" style="display: none;">
-                <div class="mb-3">
-                    <input type="text" name="full_name" placeholder="Nombre completo" class="form-control">
-                </div>
+            <form id="artistForm" method="POST" action="{{ route('register.artist') }}" style="display: none;">
+    @csrf
 
-                <div class="mb-3">
-                    <input type="email" name="email" placeholder="Correo electrónico" class="form-control">
-                </div>
-
-                <div class="d-flex gap-3 mb-3">
-                    <input type="password" name="password" placeholder="Contraseña" class="form-control">
-                    <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <input type="date" name="birth_date" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <input type="tel" name="phone" placeholder="Teléfono" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <input type="text" name="address" placeholder="Dirección" class="form-control">
-                </div>
-
-                <div class="mb-3 position-relative">
-    <label class="form-label text-light">Categorías</label>
-
-    <div class="form-control d-flex justify-content-between align-items-center category-toggle" style="cursor: pointer;">
-        <span class="category-placeholder">Selecciona una o varias categorías de interes</span>
-        <span>▼</span>
+    <div class="mb-3">
+        <input type="text" name="full_name" placeholder="Nombre completo" class="form-control">
     </div>
 
-    <div class="bg-white rounded shadow p-3 mt-1 category-options" style="display: none; position: absolute; width: 100%; z-index: 1000;">
-        <div class="form-check">
-            <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="illustration" id="artist_cat1">
-            <label class="form-check-label" for="artist_cat1">Ilustración digital</label>
+    <div class="mb-3">
+        <input type="email" name="email" placeholder="Correo electrónico" class="form-control">
+    </div>
+
+    <div class="d-flex gap-3 mb-3">
+        <input type="password" name="password" placeholder="Contraseña" class="form-control">
+        <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <input type="date" name="birth_date" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <input type="tel" name="phone" placeholder="Teléfono" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <input type="text" name="address" placeholder="Dirección" class="form-control">
+    </div>
+
+    <div class="mb-3 position-relative">
+        <label class="form-label text-light">Categorías</label>
+
+        <div class="form-control d-flex justify-content-between align-items-center category-toggle" style="cursor: pointer;">
+            <span class="category-placeholder">Selecciona una o varias categorías de interes</span>
+            <span>▼</span>
         </div>
 
-        <div class="form-check">
-            <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="concept_art" id="artist_cat2">
-            <label class="form-check-label" for="artist_cat2">Arte conceptual</label>
-        </div>
+        <div class="bg-white rounded shadow p-3 mt-1 category-options" style="display: none; position: absolute; width: 100%; z-index: 1000;">
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="illustration" id="artist_cat1">
+                <label class="form-check-label" for="artist_cat1">Ilustración digital</label>
+            </div>
 
-        <div class="form-check">
-            <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="photography" id="artist_cat3">
-            <label class="form-check-label" for="artist_cat3">Fotografía artística</label>
-        </div>
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="concept_art" id="artist_cat2">
+                <label class="form-check-label" for="artist_cat2">Arte conceptual</label>
+            </div>
 
-        <div class="form-check">
-            <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="animation" id="artist_cat4">
-            <label class="form-check-label" for="artist_cat4">Animación 2D</label>
-        </div>
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="photography" id="artist_cat3">
+                <label class="form-check-label" for="artist_cat3">Fotografía artística</label>
+            </div>
 
-        <div class="form-check">
-            <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="experimental" id="artist_cat5">
-            <label class="form-check-label" for="artist_cat5">Arte experimental</label>
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="animation" id="artist_cat4">
+                <label class="form-check-label" for="artist_cat4">Animación 2D</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="experimental" id="artist_cat5">
+                <label class="form-check-label" for="artist_cat5">Arte experimental</label>
+            </div>
         </div>
     </div>
-</div>
 
-                <button type="button" class="btn btn-primary w-100">Registrarme como artista</button>
-            </form>
+    <button type="submit" class="btn btn-primary w-100">Registrarme como artista</button>
+</form>
 
-            <form id="collectorForm" style="display: none;">
-                <div class="mb-3">
-                    <input type="text" name="full_name" placeholder="Nombre completo" class="form-control">
-                </div>
+            <form id="collectorForm" method="POST" action="{{ route('register.collector') }}" style="display: none;">
+    @csrf
 
-                <div class="mb-3">
-                    <input type="email" name="email" placeholder="Correo electrónico" class="form-control">
-                </div>
+    <div class="mb-3">
+        <input type="text" name="full_name" placeholder="Nombre completo" class="form-control">
+    </div>
 
-                <div class="d-flex gap-3 mb-3">
-                    <input type="password" name="password" placeholder="Contraseña" class="form-control">
-                    <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" class="form-control">
-                </div>
+    <div class="mb-3">
+        <input type="email" name="email" placeholder="Correo electrónico" class="form-control">
+    </div>
 
-                <div class="mb-3">
-                    <input type="date" name="birth_date" class="form-control">
-                </div>
+    <div class="d-flex gap-3 mb-3">
+        <input type="password" name="password" placeholder="Contraseña" class="form-control">
+        <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" class="form-control">
+    </div>
 
-                <div class="mb-3">
-                    <input type="tel" name="phone" placeholder="Teléfono" class="form-control">
-                </div>
+    <div class="mb-3">
+        <input type="date" name="birth_date" class="form-control">
+    </div>
 
-                <div class="mb-3">
-                    <input type="text" name="address" placeholder="Dirección" class="form-control">
-                </div>
+    <div class="mb-3">
+        <input type="tel" name="phone" placeholder="Teléfono" class="form-control">
+    </div>
 
-                <div class="mb-3 position-relative">
-                    <label class="form-label text-light">Categorías</label>
+    <div class="mb-3">
+        <input type="text" name="address" placeholder="Dirección" class="form-control">
+    </div>
 
-                    <div id="categoryToggle" class="form-control d-flex justify-content-between align-items-center" style="cursor: pointer;">
-                        <span id="categoryPlaceholder">Selecciona una o varias categorías</span>
-                        <span>▼</span>
-                    </div>
+    <div class="mb-3 position-relative">
+        <label class="form-label text-light">Categorías</label>
 
-                    <div id="categoryOptions" class="bg-white rounded shadow p-3 mt-1" style="display: none; position: absolute; width: 100%; z-index: 1000;">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="categories[]" value="illustration" id="cat1">
-                            <label class="form-check-label" for="cat1">Ilustración digital</label>
-                        </div>
+        <div class="form-control d-flex justify-content-between align-items-center category-toggle" style="cursor: pointer;">
+            <span class="category-placeholder">Selecciona una o varias categorías</span>
+            <span>▼</span>
+        </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="categories[]" value="concept_art" id="cat2">
-                            <label class="form-check-label" for="cat2">Arte conceptual</label>
-                        </div>
+        <div class="bg-white rounded shadow p-3 mt-1 category-options" style="display: none; position: absolute; width: 100%; z-index: 1000;">
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="illustration" id="collector_cat1">
+                <label class="form-check-label" for="collector_cat1">Ilustración digital</label>
+            </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="categories[]" value="photography" id="cat3">
-                            <label class="form-check-label" for="cat3">Fotografía artística</label>
-                        </div>
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="concept_art" id="collector_cat2">
+                <label class="form-check-label" for="collector_cat2">Arte conceptual</label>
+            </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="categories[]" value="animation" id="cat4">
-                            <label class="form-check-label" for="cat4">Animación 2D</label>
-                        </div>
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="photography" id="collector_cat3">
+                <label class="form-check-label" for="collector_cat3">Fotografía artística</label>
+            </div>
 
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="categories[]" value="experimental" id="cat5">
-                            <label class="form-check-label" for="cat5">Arte experimental</label>
-                        </div>
-                    </div>
-                </div>
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="animation" id="collector_cat4">
+                <label class="form-check-label" for="collector_cat4">Animación 2D</label>
+            </div>
 
-                <button type="button" class="btn btn-primary w-100">Registrarme como coleccionista</button>
-            </form>
+            <div class="form-check">
+                <input class="form-check-input category-checkbox" type="checkbox" name="categories[]" value="experimental" id="collector_cat5">
+                <label class="form-check-label" for="collector_cat5">Arte experimental</label>
+            </div>
+        </div>
+    </div>  
+
+    <button type="submit" class="btn btn-primary w-100">Registrarme como coleccionista</button>
+</form>
         </div>
     </div>
 </div>
