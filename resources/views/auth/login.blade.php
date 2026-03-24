@@ -18,19 +18,21 @@
                 <div class="text-center mb-4">
                 </div>
 
-                <form>
-                    <div class="mb-3">
-                        <label for="email" class="form-label text-white">Correo electrónico</label>
-                        <input type="email" id="email" class="form-control" placeholder="Tu email">
-                    </div>
+                <form method="POST" action="{{ route('login.submit') }}">
+    @csrf
 
-                    <div class="mb-4">
-                        <label for="password" class="form-label text-white">Contraseña</label>
-                        <input type="password" id="password" class="form-control" placeholder="Tu contraseña">
-                    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label text-white">Correo electrónico</label>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Tu email">
+    </div>
 
-                    <button type="button" class="btn btn-primary w-100">Acceder</button>
-                </form>
+    <div class="mb-4">
+        <label for="password" class="form-label text-white">Contraseña</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Tu contraseña">
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Acceder</button>
+</form>
 
                 <div class="text-center mt-4">
                     <p class="mb-0 text-light">

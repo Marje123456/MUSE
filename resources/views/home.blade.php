@@ -17,8 +17,7 @@
                     </div>
                     <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit.<br> Sed erat lectus, venenatis sit amet egestas eget, aliquet a nisl.</p>
-                    <a href="#!" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
-                        More</a>
+                    <a href="{{ route('works') }}" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore More</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -32,8 +31,7 @@
                     </div>
                     <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit.<br> Sed erat lectus, venenatis sit amet egestas eget, aliquet a nisl.</p>
-                    <a href="#!" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
-                        More</a>
+                    <a href="{{ route('works') }}" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore More</a>
                 </div>
             </div>
         </div>
@@ -112,12 +110,14 @@
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Fashion Shows</h3>
+                            <h3 class="text-uppercase">Rol del artista</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="/service#artists-role">Descubrir más <i class="fa fa-arrow-right ms-1"></i></a>
+                            <a class="btn btn-outline-primary border-2 px-4" href="{{ route('service', ['view' => 'artists']) }}">
+    Descubrir más <i class="fa fa-arrow-right ms-1"></i>
+</a>
                         </div>
                     </div>
                 </div>
@@ -131,12 +131,14 @@
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Corporate Events</h3>
+                            <h3 class="text-uppercase">Rol del coleccionista</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="/service#collectors-role">Ver experiencia <i class="fa fa-arrow-right ms-1"></i></a>
+                            <a class="btn btn-outline-primary border-2 px-4" href="{{ route('service', ['view' => 'collectors']) }}">
+                                Ver experiencia <i class="fa fa-arrow-right ms-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -150,13 +152,14 @@
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Commercial Photo Shots</h3>
+                            <h3 class="text-uppercase">Que son las obras</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            <a class="btn btn-outline-primary border-2 px-4" href="{{ route('service', ['view' => 'works']) }}">
+                                Ver obras <i class="fa fa-arrow-right ms-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -170,13 +173,14 @@
                     </div>
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
-                            <h3 class="text-uppercase">Professional Modeling</h3>
+                            <h3 class="text-uppercase">como crecer con muse</h3>
                             <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
                                 fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
                                 Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
                                 rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
-                            <a class="btn btn-outline-primary border-2 px-4" href="#!">Read More <i
-                                    class="fa fa-arrow-right ms-1"></i></a>
+                            <a class="btn btn-outline-primary border-2 px-4" href="{{ route('service', ['view' => 'growth']) }}">
+                                Ver crecimiento <i class="fa fa-arrow-right ms-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
