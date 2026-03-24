@@ -21,6 +21,14 @@ Route::post('/register/artist', [AuthController::class, 'registerArtist'])->name
 Route::post('/register/collector', [AuthController::class, 'registerCollector'])->name('register.collector');
 Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
 
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+})->name('admin.dashboard');
+
+Route::get('/admin/', function () {
+    return view('admin.dashboard');
+});
+
 Route::fallback(function () {
     return view('notfound');
 });
