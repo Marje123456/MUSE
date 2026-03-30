@@ -1,15 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Muse - Plataforma')
-
-@section('header')
-<div class="page-header pb-5">
-    <div class="container text-center py-5">
-        <h1 class="display-4 text-uppercase mb-3 animated slideInDown">Muse</h1>
-        <p class="text-light mb-0">Bienvenido a tu espacio dentro de la plataforma.</p>
-    </div>
-</div>
-@endsection
+@section('hide_chrome', 'true')
 
 @section('content')
 <div class="container py-5">

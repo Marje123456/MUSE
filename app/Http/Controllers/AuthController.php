@@ -43,20 +43,20 @@ class AuthController extends Controller
     }
 
     public function login(Request $request)
-{
-    $credentials = $request->validate([
-        'email' => ['required', 'email'],
-        'password' => ['required'],
-    ]);
+    {
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
 
-    if (Auth::attempt($credentials)) {
-        $request->session()->regenerate();
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
 
-        return redirect()->route('dashboard');
+            return redirect()->route('intro');
+        }
+
+        return redirect()->route('login')
+            ->with('error', 'Las credenciales no son válidas.')
+            ->withInput();
     }
-
-    return redirect()->route('login')
-        ->with('error', 'Las credenciales no son válidas.')
-        ->withInput();
-}
 }
