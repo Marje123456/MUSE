@@ -14,6 +14,8 @@ Route::view('/register', 'auth.register')->name('register');
 Route::view('/login', 'auth.login')->name('login');
 Route::view('/faqs', 'faqs')->name('faqs');
 Route::view('/obras', 'works')->name('works');
+Route::view('/intro', 'intro')->name('intro');
+Route::view('/dashboard', 'dashboard')->name('dashboard');
 
 Route::view('/404', 'notfound')->name('notfound');
 

@@ -33,34 +33,37 @@
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+    @unless(View::hasSection('hide_chrome'))
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
         </div>
-    </div>
-    <!-- Spinner End -->
+        <!-- Spinner End -->
+    @endunless
 
+    @unless(View::hasSection('hide_chrome'))
+        <!-- Header Start -->
+        <div class="container-fluid p-0">
+            @include('partials.navbar')
 
-    <!-- Header Start -->
-    <div class="container-fluid p-0">
-        @include('partials.navbar')
-
+            @yield('header')
+        </div>
+        <!-- Header End -->
+    @else
         @yield('header')
-    </div>
-    <!-- Header End -->
-
+    @endunless
 
     @yield('content')
 
+    @unless(View::hasSection('hide_chrome'))
+        @include('partials.footer')
 
-    @include('partials.footer')
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    @endunless
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

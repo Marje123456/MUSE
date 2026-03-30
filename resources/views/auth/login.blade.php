@@ -15,24 +15,33 @@
     <div class="row justify-content-center">
         <div class="col-lg-5">
             <div class="bg-dark rounded p-4 p-md-5 shadow">
-                <div class="text-center mb-4">
-                </div>
+                @if (session('success'))
+                    <div class="alert alert-success mb-4">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
+                @if (session('error'))
+                    <div class="alert alert-danger mb-4">
+                        {{ session('error') }}
+                    </div>
+                @endif
 
                 <form method="POST" action="{{ route('login.submit') }}">
-    @csrf
+                    @csrf
 
-    <div class="mb-3">
-        <label for="email" class="form-label text-white">Correo electrónico</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Tu email">
-    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-white">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Tu email" value="{{ old('email') }}">
+                    </div>
 
-    <div class="mb-4">
-        <label for="password" class="form-label text-white">Contraseña</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Tu contraseña">
-    </div>
+                    <div class="mb-4">
+                        <label for="password" class="form-label text-white">Contraseña</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Tu contraseña">
+                    </div>
 
-    <button type="submit" class="btn btn-primary w-100">Acceder</button>
-</form>
+                    <button type="submit" class="btn btn-primary w-100">Acceder</button>
+                </form>
 
                 <div class="text-center mt-4">
                     <p class="mb-0 text-light">
@@ -44,6 +53,7 @@
         </div>
     </div>
 </div>
+
 <style>
 form .form-control,
 form .form-control::placeholder,

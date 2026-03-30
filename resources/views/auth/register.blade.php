@@ -10,7 +10,15 @@
                 <h2 class="mb-3 display-4">Registro</h2>
                 <p class="text-light">Selecciona el tipo de cuenta con el que quieres entrar en Muse.</p>
             </div>
-
+@if ($errors->any())
+    <div class="alert alert-danger text-start">
+        <ul class="mb-0">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
             <div class="mb-4">
                 <select id="accountType" class="form-control">
                     <option value="">Selecciona tipo de cuenta</option>
